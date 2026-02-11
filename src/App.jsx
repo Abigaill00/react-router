@@ -1,9 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-export default function App() {
+import HomePage from "./pages/HomePage.jsx"
+import ChiSiamo from "./pages/ChiSiamoPage"
+import Products from ".pages/ProductsPage"
+import Navbar from "./components/Navbar"
+
+function App() {
   return <BrowserRouter>
-  <Routes>
-    <Route path="/"element={HomePage} />
-  </Routes>
+    <Navbar />
+    <Routes>
+      <Route path="/" Component={HomePage} />
+      <Route path="/ChiSiamoPage" Component={ChiSiamo} />
+      <Route path="/ProductsPage" Component={Products} />
+    </Routes>
   </BrowserRouter>;
 }

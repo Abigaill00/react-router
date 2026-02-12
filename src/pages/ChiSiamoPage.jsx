@@ -6,3 +6,5 @@ function ChiSiamoPage() {
         </div>
     );
 }
+
+export default ChiSiamoPage;

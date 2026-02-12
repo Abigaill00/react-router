@@ -1,23 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage.jsx"
-import ChiSiamo from "./pages/ChiSiamoPage.jsx"
-import Products from "./pages/ProductsPage.jsx"
+import ChiSiamoPage from "./pages/ChiSiamoPage.jsx"
+import ProductsPage from "./pages/ProductsPage.jsx"
 import DefaultLayout from "./layouts/DefaultLayout.jsx";
 
 function App() {
-  return <>
-    <BrowserRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route path="/" Component={HomePage} />
-          <Route path="/ChiSiamoPage" Component={ChiSiamo} />
-          <Route path="/ProductsPage" Component={Products} />
-        </Route>
-      </Routes>
-    </BrowserRouter>;h
-    
-  </>
+  return (
+    <Routes>
+      <Route element={<DefaultLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/chi-siamo" element={<ChiSiamoPage />} />
+        <Route path="/prodotti" element={<ProductsPage />} />
+      </Route>
+    </Routes>
+  )
 }
 
 export default App;
